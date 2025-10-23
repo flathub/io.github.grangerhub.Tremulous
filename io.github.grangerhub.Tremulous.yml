@@ -35,6 +35,7 @@ modules:
     make-args:
       - BUILD_SERVER=0
       - DEFAULT_BASEDIR=/app/share/tremulous
+      - TOOLS_CFLAGS="-std=gnu11"
       - USE_CURL=1
       - USE_CURL_DLOPEN=0
       - USE_INTERNAL_SPEEX=0
