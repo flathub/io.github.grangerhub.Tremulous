@@ -1,6 +1,6 @@
 app-id: io.github.grangerhub.Tremulous
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 finish-args:
   - --device=dri
@@ -50,6 +50,8 @@ modules:
         path: tremulous-makefile.patch
       - type: patch
         path: tremulous-sol.patch
+      - type: patch
+        path: tremulous-constexpr.patch
       - type: file
         path: io.github.grangerhub.Tremulous.png
       - type: file
