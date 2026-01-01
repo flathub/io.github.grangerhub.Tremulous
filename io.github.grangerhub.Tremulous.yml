@@ -27,7 +27,7 @@ modules:
         strip-components: 0
     build-commands:
       - mkdir -p /app/share/tremulous/gpp
-      - cp *.pk3 /app/share/tremulous/gpp
+      - cp tremulous-data-1.1.0/*.pk3 /app/share/tremulous/gpp
 
   - name: tremulous-engine
     no-autogen: true
