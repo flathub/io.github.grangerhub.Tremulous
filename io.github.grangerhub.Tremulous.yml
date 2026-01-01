@@ -61,6 +61,7 @@ modules:
       - cp build/release/renderer_opengl*.so /app/share/tremulous
       - cp -r build/release/gpp/vm /app/share/tremulous/gpp
       - cp -r build/release/gpp/data-1.3.0.pk3 /app/share/tremulous/gpp
+      - cp -r build/release/gpp/vms-1.3.0.pk3 /app/share/tremulous/gpp
       - mkdir -p /app/share/tremulous/gpp_11
       - cp -r build/release/gpp_11/vm /app/share/tremulous/gpp_11
       - cp -r scripts /app/share/tremulous/scripts
