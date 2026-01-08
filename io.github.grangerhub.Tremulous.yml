@@ -18,17 +18,6 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
-  - name: tremulous-data
-    buildsystem: simple
-    sources:
-      - type: archive
-        url: https://github.com/GrangerHub/tremulous-data/archive/refs/tags/v1.1.0.tar.gz
-        sha256: 39dacbe51ce0ef3c1f92b2c145215eaf0ef1e8afdb3efea256acb145f68f0b45
-        strip-components: 0
-    build-commands:
-      - mkdir -p /app/share/tremulous/gpp
-      - cp tremulous-data-1.1.0/*.pk3 /app/share/tremulous/gpp
-
   - name: tremulous-engine
     no-autogen: true
     no-make-install: true
@@ -44,8 +33,8 @@ modules:
       - USE_LOCAL_HEADERS=0
     sources:
       - type: archive
-        url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.1.tar.gz
-        sha256: 0d1de269657ed6b4b35dd40d1fd4f4d6b150c3de518c5d235aac144b09c75c60
+        url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.2.tar.gz
+        sha256: 97cda0a81c1b5bd43422b2791537b2f2c8a331328fcf96c8dbdefae188efcc7d
       - type: patch
         path: tremulous-makefile.patch
       - type: file
