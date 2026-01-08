@@ -47,7 +47,7 @@ modules:
         url: https://github.com/GrangerHub/tremulous-data/archive/refs/tags/v1.1.0.zip
         sha256: 9d3346db1a53057834cb3db9555515614386a9b6d97000ff5cd1f7fd86530d0b
         dest: build
-        dest-filename: build/data-1.1.0.zip
+        dest-filename: data-1.1.0.zip
       - type: file
         url: https://github.com/GrangerHub/tremulous-assets/releases/download/data-1.3.0/tremulous-grhub-1.3.0.pk3
         sha256sum: df786f23628e0b9c5e9b8981141bd64fe9841ae54d5ad6a319f9a953b8ee74bf
