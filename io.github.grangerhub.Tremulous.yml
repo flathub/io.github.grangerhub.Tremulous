@@ -31,6 +31,7 @@ modules:
       - USE_OPENAL=1
       - USE_OPENAL_DLOPEN=0
       - USE_LOCAL_HEADERS=0
+      - VERSION=v1.3.0-alpha-0.15.2
     sources:
       - type: archive
         url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.2.tar.gz
