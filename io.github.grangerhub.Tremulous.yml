@@ -35,7 +35,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.2.tar.gz
-        sha256: 97cda0a81c1b5bd43422b2791537b2f2c8a331328fcf96c8dbdefae188efcc7d
+        sha256: 166d1613d4b028b56bf3bfa364f5d937c0510c10140081f14c6c41c1ee636c60
       - type: patch
         path: tremulous-makefile.patch
       - type: file
