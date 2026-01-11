@@ -41,7 +41,7 @@ modules:
       - type: file
         path: io.github.grangerhub.Tremulous.png
       - type: file
-        path: io.github.grangerhub.Tremulous.appdata.xml
+        path: io.github.grangerhub.Tremulous.metainfo.xml
       - type: file
         path: io.github.grangerhub.Tremulous.desktop
       - type: file
@@ -65,6 +65,6 @@ modules:
       - mkdir -p /app/share/tremulous/gpp_11
       - cp -r build/release/gpp_11/vm /app/share/tremulous/gpp_11
       - cp -r scripts /app/share/tremulous/scripts
-      - install -Dm644 io.github.grangerhub.Tremulous.appdata.xml /app/share/appdata/io.github.grangerhub.Tremulous.appdata.xml
+      - install -Dm644 io.github.grangerhub.Tremulous.metainfo.xml /app/share/metainfo/io.github.grangerhub.Tremulous.metainfo.xml
       - install -Dm644 io.github.grangerhub.Tremulous.desktop /app/share/applications/io.github.grangerhub.Tremulous.desktop
       - install -Dm644 io.github.grangerhub.Tremulous.png /app/share/icons/hicolor/128x128/apps/io.github.grangerhub.Tremulous.png
