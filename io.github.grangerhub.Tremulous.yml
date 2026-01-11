@@ -18,17 +18,6 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
-  - name: tremulous-data
-    buildsystem: simple
-    sources:
-      - type: archive
-        url: https://github.com/GrangerHub/tremulous-data/archive/refs/tags/v1.1.0.tar.gz
-        sha256: 39dacbe51ce0ef3c1f92b2c145215eaf0ef1e8afdb3efea256acb145f68f0b45
-        strip-components: 0
-    build-commands:
-      - mkdir -p /app/share/tremulous/gpp
-      - cp *.pk3 /app/share/tremulous/gpp
-
   - name: tremulous-engine
     no-autogen: true
     no-make-install: true
@@ -42,27 +31,40 @@ modules:
       - USE_OPENAL=1
       - USE_OPENAL_DLOPEN=0
       - USE_LOCAL_HEADERS=0
+      - VERSION=v1.3.0-alpha-0.15.2
     sources:
       - type: archive
-        url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.1.tar.gz
-        sha256: 0d1de269657ed6b4b35dd40d1fd4f4d6b150c3de518c5d235aac144b09c75c60
+        url: https://github.com/GrangerHub/tremulous/archive/refs/tags/v1.3.0-alpha.0.15.2.tar.gz
+        sha256: 166d1613d4b028b56bf3bfa364f5d937c0510c10140081f14c6c41c1ee636c60
       - type: patch
         path: tremulous-makefile.patch
       - type: file
         path: io.github.grangerhub.Tremulous.png
       - type: file
-        path: io.github.grangerhub.Tremulous.appdata.xml
+        path: io.github.grangerhub.Tremulous.metainfo.xml
       - type: file
         path: io.github.grangerhub.Tremulous.desktop
+      - type: file
+        url: https://github.com/GrangerHub/tremulous-data/archive/refs/tags/v1.1.0.zip
+        sha256: 9d3346db1a53057834cb3db9555515614386a9b6d97000ff5cd1f7fd86530d0b
+        dest: build
+        dest-filename: data-1.1.0.zip
+      - type: file
+        url: https://github.com/GrangerHub/tremulous-assets/releases/download/data-1.3.0/tremulous-grhub-1.3.0.pk3
+        sha256: df786f23628e0b9c5e9b8981141bd64fe9841ae54d5ad6a319f9a953b8ee74bf
+        dest: build
+        dest-filename: data-grhub-1.3.0.pk3
     post-install:
       - install -Dm755 build/release/tremulous /app/bin/tremulous
       - install -Dm755 build/release/granger /app/bin/granger
+      - mkdir -p /app/share/tremulous/gpp
       - cp build/release/gpp/*.so /app/share/tremulous/gpp
       - cp build/release/renderer_opengl*.so /app/share/tremulous
       - cp -r build/release/gpp/vm /app/share/tremulous/gpp
+      - cp -r build/release/gpp/*.pk3 /app/share/tremulous/gpp
       - mkdir -p /app/share/tremulous/gpp_11
       - cp -r build/release/gpp_11/vm /app/share/tremulous/gpp_11
       - cp -r scripts /app/share/tremulous/scripts
-      - install -Dm644 io.github.grangerhub.Tremulous.appdata.xml /app/share/appdata/io.github.grangerhub.Tremulous.appdata.xml
+      - install -Dm644 io.github.grangerhub.Tremulous.metainfo.xml /app/share/metainfo/io.github.grangerhub.Tremulous.metainfo.xml
       - install -Dm644 io.github.grangerhub.Tremulous.desktop /app/share/applications/io.github.grangerhub.Tremulous.desktop
       - install -Dm644 io.github.grangerhub.Tremulous.png /app/share/icons/hicolor/128x128/apps/io.github.grangerhub.Tremulous.png
